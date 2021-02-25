@@ -1,0 +1,604 @@
+.App-header {
+  background: #fbbd13;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.background-logo{
+  opacity: 0.3;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80%;
+}
+
+.GameLinkDiv{
+  position: relative;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.returnHome{
+  height: 50%;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.GameLinkImg{
+  z-index: 10;
+  opacity: 1;
+  width: 100px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #000;
+}
+
+.gameDisplay{
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+  .header{
+    display: flex;
+    max-height: 15vh;
+    min-width: 100vw;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+
+    .titleDiv{
+      display: flex;
+    }
+
+    .counters{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      margin-right: 20px;
+    }
+
+      .count{
+        font-size: 100%;
+        color: #fff;
+        margin: 0;
+        text-align: end;
+      }
+
+      .wins{
+        color: #070;
+      }
+
+      .loses{
+        color: #700;
+      }
+
+      .streak{
+        color: #0aa;
+      }
+
+      .streak-record{
+        color: #0bb;
+      }
+
+    .gameScreen{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-bottom: 10px;
+      width: 85vw;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+      background: #fff7;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px #000;
+      z-index: 10;
+      backdrop-filter: blur(5px);
+    }
+
+      .gameImageDiv{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+        .gmImg{
+          max-width: 300px;
+          width: 100%;
+        }
+
+        .newGameBtn{
+          max-width: 200px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+      .gameDiv{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 20px;
+      }
+
+        .displayWord{
+          display: flex;
+          justify-content: center;
+          gap: 1vw;
+        }
+
+          .displayLetter{
+            color: #fff;
+            font-size: 40px;
+          }
+
+        .btns{
+          display: flex;
+          gap: 10px;
+          flex-wrap: wrap;
+          justify-content: center;
+          max-width: 500px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+          .letterBtn{
+            width: 3vw;
+            height: 3vw;
+            min-width: 30px;
+            min-height: 30px;
+            background: #fff;
+            border-radius: 5px;
+            border: 2px solid #e8e8e8;
+            outline: none;
+            box-shadow: 0 0 5px #00f;
+            text-transform: uppercase;
+            font-weight: bold;
+            cursor: pointer;
+          }
+
+            .letterBtn:hover{
+              background: #aaa;
+            }
+
+            #next{
+              font-weight: bold;
+              cursor: default;
+            }
+
+
+        .playerNames{
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          width: 60vw;
+          margin-left: auto;
+          margin-right: auto;;
+        }
+
+          .playerNames p{
+            text-align: center;
+            max-width: 130px;
+            width: 50%;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+          }
+
+        .choices{
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          width: 60vw;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+          .choices img{
+            max-width: 130px;
+            width: 50%;
+          }
+
+        .rpsBtnsDiv{
+          margin-top: 50px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+
+          .rpsOptionBtn{
+            max-width: 130px;
+            width: 33.3%;
+            background: none;
+            outline: none;
+            border: none;
+            cursor: pointer;
+          }
+          
+            .rpsOptionBtnImg{
+              width: 100%;
+            }
+
+        .rpslsBtnsDiv{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin-top: 30px;
+        }
+
+        .rpslsOptionBtn{
+          max-width: 130px;
+          width: 26%;
+          background: none;
+          outline: none;
+          border: none;
+          cursor: pointer;
+        }
+        
+          .rpslsOptionBtnImg{
+            width: 100%;
+          }
+
+.loadScreen{
+  background: #fbbd13;
+  z-index: 1000;
+  display: flex;
+  position: fixed;
+  min-width: 100vw;
+  min-height: 100vh;
+  animation: loadHide 5s forwards linear;
+}
+
+.loadDiv{
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.loadLogo{
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loadWheel{
+  min-width: 75px;
+  max-width: 300px;
+  min-height: 75px;
+  max-height: 300px;
+  border: 2px solid #000;
+  border-top: 2px solid #ff0;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  animation: spinLoadWheel 2s forwards linear infinite;
+}
+
+.rpsModeh2{
+  text-align: center;
+  font-size: 25px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0 0 10px #000;
+  margin-top: -30px;
+}
+
+.rpsMode{
+  display: flex;
+  width: 100vw;
+  max-height: 50vh;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.rpsModeLink{
+  min-width: 150px;
+  max-width: 30%;
+  max-height: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+  .rpsModeImg{
+    height: 100%;
+    max-width: 100%;
+  }
+
+  .rpsModeLink:hover{
+    box-shadow: 0 0 10px #000;
+  }
+
+.memoryTitle{
+  text-align: center;
+  font-size: 35px;
+  position: relative;
+  text-shadow: 1px 1px 2px #fff;
+  cursor: default;
+}
+
+.memoryChoose div{
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px #fff;
+  cursor: default;
+}
+
+.memoryDifficultDiv{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-weight: bold;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+  .memoryDif{
+    cursor: pointer;
+    color: #0f0;
+    text-shadow: 0 0 5px #000;
+  }
+
+  .win-fireworks-left{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 40vw;
+    display: none;
+  }
+
+  .win-fireworks-right{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 40vw;
+    display: none;
+  }
+
+  .moves{
+    color: #777;
+  }
+  
+  .memoryTime{
+    display: none;
+    color: #fff;
+  }
+
+  .choices{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+    .choices img{
+      max-width: 130px;
+      width: 50%;
+    }
+
+  .memoBtnsDiv{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .newGameScreen{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+    .newGameScreen button{
+      max-width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 20px;
+      border-radius: 7px;
+      cursor: pointer;
+    }
+
+    .memoWin{
+      text-align: center;
+      color: #0f0;
+      font-size: 25px;
+      font-weight: bold;
+      display: none;
+    }
+
+    .memoLose{
+      text-align: center;
+      color: #f00;
+      font-size: 25px;
+      font-weight: bold;
+      display: none;
+    }
+
+  .memoBtnContainer{
+    width: 25%;
+    max-width: 130px;
+    min-width: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+    .memoOptionBtn{
+      width: 100%;
+      max-width: 130px;
+      min-width: 60px;
+      background: none;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+    
+      .pokeballCard{
+        width: 100%;
+        max-width: 130px;
+        min-width: 60px;
+      }
+
+      .flippedImg{
+        display: none;
+        width: 100%;
+        max-width: 130px;
+        min-width: 60px;
+      }
+
+.infoRpsBtn{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.infoRpsDiv{
+  position: fixed;
+  z-index: 100;
+  background: url(./rpsInfo.png) no-repeat;
+  background-size: contain;
+  width: 50vh;
+  height: 50vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.infoRpslsDiv{
+  position: fixed;
+  z-index: 100;
+  background: url(./rpslsInfo.png) no-repeat;
+  background-size: contain;
+  width: 50vh;
+  height: 50vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.closeRpsInfo{
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: end;
+  margin-right: 20px;
+  margin-top: 0px;
+  cursor: pointer;
+}
+
+@keyframes showImg{ 
+  from{
+  opacity: 0;
+  }
+
+  to{
+  opacity: 1;
+  }
+}
+
+@keyframes hideCard{
+  from{
+  opacity: 1;
+  }
+
+  to{
+  opacity: 0;
+  }
+}
+
+@keyframes spinLoadWheel{
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes loadHide{
+  0%{
+    opacity: 1;
+  }
+
+  95%{
+    opacity: 1;
+  }
+
+  100%{
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@media screen and (max-width: 328px){
+  .infoRpslsDiv{
+    width: 70vw;
+    height: 70vw;
+  }
+
+  .infoRpsDiv{
+    width: 70vw;
+    height: 70vw;
+  }
+}
+
+table{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-collapse: collapse;
+  box-shadow: 1px 1px 5px #000;
+}
+
+th{
+  width: 40px;
+  height: 40px;
+  margin: 0;
+}
+
+.mineEven{
+  background: #070;
+}
+
+.mineOdd{
+  background: #0a0;
+}
+
+.mineHeader{
+  background: #050;
+  color: #fff;
+}
