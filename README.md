@@ -17,7 +17,7 @@
 
 •By the moment: Memotest, Rock-Scissors-Paper and Hangman.<br/><br/>
 •You can select the <a href="#one">difficult level of the Memotest game</a>... if you dare, try the difficult ones!.<br/><br/>
-•On the Rock-Scissors-Paper game you can choose between <a href="two">2 game modes</a>: :facepunch:-:v:-:hand: and :facepunch:-:v:-:hand:-:lizard:-:vulcan_salute:<br/>
+•On the Rock-Scissors-Paper game you can choose between <a href="two">2 game modes</a>: :facepunch:-:v:-:hand: and :facepunch:-:v:-:hand:-:crocodile:-:vulcan_salute:<br/>
 &nbsp;&nbsp;&nbsp;-If you don't know how to play any Rock-Scissors-Paper's mode, you will find an advantages table.<br/><br/>
 •You can find lots of words on the Hangman game.
 
